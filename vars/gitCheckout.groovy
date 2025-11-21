@@ -8,4 +8,3 @@ def call(String repoUrl, String branch = null, String credentialId = null) {
         ]]
     ])
 }
-#call(repoUrl, branch, credentialId)
