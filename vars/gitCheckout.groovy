@@ -1,7 +1,10 @@
 def call(String repoUrl, String branch = null, String credentialId = null) {
+
+    def branchList = branch ? [[name: branch]] : []
+
     checkout([
         $class: 'GitSCM',
-        branches: [[name: branch]],
+        branches: branchList,
         userRemoteConfigs: [[
             url: repoUrl,
             credentialsId: credentialId
